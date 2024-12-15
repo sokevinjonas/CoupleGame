@@ -1,0 +1,190 @@
+:host {
+  --primary-gradient: linear-gradient(135deg, #ff69b4, #ff1493);
+  --truth-color: #9c27b0;
+  --dare-color: #f44336;
+}
+
+.game-header {
+  --background: var(--primary-gradient);
+
+  ion-title {
+    color: white;
+    font-weight: 600;
+  }
+}
+
+.scores-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+  .player-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &.active {
+      background: rgba(255, 105, 180, 0.1);
+      transform: scale(1.05);
+    }
+
+    ion-avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+
+      ion-icon {
+        font-size: 24px;
+        color: white;
+      }
+    }
+
+    span {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+
+    .score {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff69b4;
+    }
+  }
+
+  .versus {
+    font-weight: bold;
+    color: #666;
+  }
+}
+
+.game-container {
+  text-align: center;
+
+  .current-player {
+    color: #ff69b4;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .choose-text {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .choice-buttons {
+    display: grid;
+    gap: 1rem;
+    margin: 0 1rem;
+
+    .choice-button {
+      --border-radius: 15px;
+      --padding-start: 2rem;
+      --padding-end: 2rem;
+      height: 60px;
+      font-size: 1.2rem;
+      text-transform: none;
+
+      &.truth {
+        --background: var(--truth-color);
+      }
+
+      &.dare {
+        --background: var(--dare-color);
+      }
+
+      ion-icon {
+        font-size: 1.4rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.question-container {
+  padding: 1rem;
+
+  .question-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: scaleIn 0.5s ease;
+
+    &.verite {
+      border-left: 5px solid var(--truth-color);
+    }
+
+    &.action {
+      border-left: 5px solid var(--dare-color);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      ion-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        color: var(--truth-color);
+      }
+
+      h3 {
+        margin: 0;
+        color: #333;
+        font-size: 1.2rem;
+      }
+    }
+
+    .question-text {
+      font-size: 1.3rem;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .next-button {
+    --background: var(--primary-gradient);
+    --border-radius: 15px;
+    margin-top: 1rem;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

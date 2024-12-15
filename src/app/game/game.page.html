@@ -1,0 +1,72 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="game-header">
+    <ion-title>Tour {{ turn }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="resetGame()">
+        <ion-icon name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="scores-container">
+    <div class="player-score" [class.active]="currentPlayer === player1">
+      <ion-avatar>
+        <ion-icon name="heart"></ion-icon>
+      </ion-avatar>
+      <span>{{ player1 }}</span>
+      <div class="score">{{ score1 }}</div>
+    </div>
+    <div class="versus">VS</div>
+    <div class="player-score" [class.active]="currentPlayer === player2">
+      <ion-avatar>
+        <ion-icon name="heart"></ion-icon>
+      </ion-avatar>
+      <span>{{ player2 }}</span>
+      <div class="score">{{ score2 }}</div>
+    </div>
+  </div>
+
+  <div class="game-container" *ngIf="!question">
+    <h2 class="current-player">{{ currentPlayer }}, c'est ton tour !</h2>
+    <p class="choose-text">Choisis ton défi</p>
+
+    <div class="choice-buttons">
+      <ion-button
+        class="choice-button truth"
+        expand="block"
+        (click)="choose('verite')"
+      >
+        <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+        Vérité
+      </ion-button>
+
+      <ion-button
+        class="choice-button dare"
+        expand="block"
+        (click)="choose('action')"
+      >
+        <ion-icon name="flash-outline" slot="start"></ion-icon>
+        Action
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="question-container" *ngIf="question">
+    <div class="question-card" [ngClass]="selectedType">
+      <div class="card-header">
+        <ion-icon
+          name="{{selectedType === 'action' ? 'flash-outline' : 'chatbubbles-outline'}}"
+        ></ion-icon>
+        <h3>{{ selectedType === 'action' ? 'Action' : 'Vérité' }}</h3>
+      </div>
+      <p class="question-text">{{ question }}</p>
+    </div>
+
+    <ion-button expand="block" class="next-button" (click)="nextTurn()">
+      <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      Tour suivant
+    </ion-button>
+  </div>
+</ion-content>
