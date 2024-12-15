@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SplashScreen } from '@capacitor/splash-screen';
+import { StatusBar } from '@capacitor/status-bar';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    this.showSplash();
+    StatusBar.setBackgroundColor({ color: '#ff1493' });
+  }
+
+  async showSplash(): Promise<void> {
+    await SplashScreen.show({
+      autoHide: false,
+    });
+  }
 }
