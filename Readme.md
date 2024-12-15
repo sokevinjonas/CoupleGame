@@ -1,18 +1,16 @@
-# Dare Challenges Game
+# Couple Game
 
 Un jeu de défis amusants et audacieux pour pimenter vos moments entre amis, en couple ou en groupe. Chaque défi est conçu pour apporter du fun et de la complicité !
 
 ## Description
 
-Dare Challenges propose une liste de défis divers et variés. Les joueurs peuvent tirer des cartes virtuelles ou choisir des défis au hasard, allant des actions amusantes et innocentes aux défis plus audacieux et sensuels. Ce jeu peut être joué lors de soirées, d’événements spéciaux ou tout simplement pour se divertir.
+Couple Game propose une liste de défis divers et variés. Les joueurs peuvent tirer des cartes virtuelles ou choisir des défis au hasard, allant des actions amusantes et innocentes aux défis plus audacieux et sensuels. Ce jeu peut être joué lors de soirées, d’événements spéciaux ou tout simplement pour se divertir.
 
 ## Fonctionnalités
 
 - **Défis au hasard** : Des défis qui varient entre des actions physiques et des interactions verbales.
 - **Choix de catégories** : Chaque défi peut être adapté à l'ambiance du moment, avec des options de défis plus osés ou plus légers.
 - **Facile à jouer** : Il suffit de lire un défi et de le réaliser, seul ou avec des amis.
-
-## Liste des défis
 
 ### Défis généraux
 
@@ -41,7 +39,7 @@ Dare Challenges propose une liste de défis divers et variés. Les joueurs peuve
 
 1. Clonez ce dépôt sur votre machine locale :
    ```bash
-   git clone https://github.com/ton-utilisateur/dare-challenges.git
+   git clone https://github.com/sokevinjonas/CoupleGame
    ```
 2. Allez dans le répertoire du projet : :
    ```bash
