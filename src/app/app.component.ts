@@ -9,13 +9,14 @@ import { StatusBar } from '@capacitor/status-bar';
 })
 export class AppComponent {
   constructor() {
+    StatusBar.setBackgroundColor({ color: '#ff69b4' });
     this.showSplash();
-    StatusBar.setBackgroundColor({ color: '#ff1493' });
   }
 
-  async showSplash(): Promise<void> {
+  async showSplash() {
     await SplashScreen.show({
-      autoHide: false,
+      showDuration: 2000,
+      autoHide: true,
     });
   }
 }

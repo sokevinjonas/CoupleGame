@@ -25,7 +25,7 @@ export const dareChallenges = [
   'Fais-moi une promesse que tu tiendras cette semaine',
   "Chuchote-moi à l'oreille un fantasme secret",
   'Fais-moi un massage sensuel de 5 minutes',
-  'Déshabille-moi avec tes yeux pendant 30 secondes',
+  'Déshabille-moi avec tes yeux fermés pendant 30 secondes',
   'Embrasse-moi passionnément pendant une minute',
   'Rapproche-toi doucement de mes lèvres sans les toucher',
   'Regarde-moi dans les yeux et dis-moi ce que tu aimerais faire',
