@@ -1,0 +1,7 @@
+{
+  "name": "CoupleGame",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
