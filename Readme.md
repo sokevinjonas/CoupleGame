@@ -43,7 +43,7 @@ Couple Game propose une liste de défis divers et variés. Les joueurs peuvent t
    ```
 2. Allez dans le répertoire du projet : :
    ```bash
-   cd dare-challenges
+   cd CoupleGame
    ```
 3. Installez les dépendances :
    ```bash
