@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">CoupleGame</string>
-    <string name="title_activity_main">CoupleGame</string>
+    <string name="app_name">Couple Game</string>
+    <string name="title_activity_main">Couple Game</string>
     <string name="package_name">com.couple.game</string>
     <string name="custom_url_scheme">com.couple.game</string>
 </resources>
